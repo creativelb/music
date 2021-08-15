@@ -1,0 +1,58 @@
+.Playlist {
+    width: 100%; height: 100%; overflow: scroll;
+    &::-webkit-scrollbar{width: 5px; height: 1px;}
+    &::-webkit-scrollbar-thumb {border-radius: 5px; background-color: rgba($color: #000, $alpha: 0.2);}
+    &::-webkit-scrollbar-track {box-shadow: 0 0 3px rgba($color: #000, $alpha: 0.2);}
+    .info {
+        display: flex; padding: 36px; max-width: 100%;
+        .cover {
+            width: 160px; height: 160px; margin-right: 20px;
+            img {width: 100%; height: 100%; object-fit: contain;}
+        }
+        .content {
+            flex: 1; display: flex; flex-direction: column; justify-content: space-between; max-width: 100%;
+            height: 160px;
+            .title {font-size: 18px;}
+            .author {
+                display: flex; align-items: center;
+                .avatar {
+                    width: 30px; height: 30px; border-radius: 50%; overflow: hidden; margin-right: 10px;
+                    img{width: 100%; height: 100%;object-fit: cover;}
+                }
+                .name {font-size: 16px; margin-right: 10px;}
+                .time {font-size: 12px;}
+            }
+            .button {
+                width: 150px; padding: 10px 15px; font-size: 14px; text-align: center;
+                background-color: #d74d45; color: #fff; border-radius: 3px; cursor: pointer;
+                i {margin-right: 5px;}
+            }
+            .tags, .description {
+                max-width: 100%;
+                font-size: 14px; overflow:hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .songs {
+        .song-item {
+            display: flex; align-items: center; padding: 5px 30px; font-size: 13px; cursor: default;
+            &:hover {background-color: #efefef;}
+            .index, .volumn{width: 50px; text-align: left;} 
+            .volumn {color: #d74d45} .index {color: #bebecd;}
+            .song-img {
+                width: 65px; height: 65px; border-radius: 3px; overflow: hidden;
+                margin-right: 30px;
+                img {width: 100%; height: 100%; object-fit: cover;}
+            }
+            .song-title, .song-singer, .song-album {
+                flex: 1; font-size: 13px;
+            }
+        }
+        
+        .active {
+            .song-title {color: #d74d45}
+        }
+    }
+}

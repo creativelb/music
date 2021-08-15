@@ -1,0 +1,19 @@
+.Main {
+    display: flex; width: 100%; height: 100%;
+    .sidebar{ 
+        width: 260px;
+        background-color: #ededed;
+        ul {
+            li {
+                padding: 15px 20px; font-size: 14px;cursor: pointer;
+                font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+                &:hover{background-color: #e7e7e7;}
+                i {font-size: 18px; margin-right: 10px;}
+                &.active { color: #d74d45; background-color: #e7e7e7; }
+            }
+        }
+    }
+    .content {
+        flex: 1; height: 100%;width: 100%;
+    }
+}

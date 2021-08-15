@@ -1,0 +1,44 @@
+.Search {
+    width: 100%; height: 100%; overflow: scroll; padding: 0 0 30px;
+    &::-webkit-scrollbar{width: 5px; height: 1px;}
+    &::-webkit-scrollbar-thumb {border-radius: 5px; background-color: rgba($color: #000, $alpha: 0.2);}
+    &::-webkit-scrollbar-track {box-shadow: 0 0 3px rgba($color: #000, $alpha: 0.2);}
+    .info {
+        padding: 20px 40px 10px;
+        .search-content { font-size: 28px; font-weight: bold; margin-right: 5px;}
+        .count {font-size: 14px; color: #bebebe;}
+    }
+    .categorys {
+        display: flex; align-items: center; padding: 15px 30px 30px; font-size: 20px;
+        .category {padding: 0 10px; cursor: pointer;} 
+        .active {color: #d74d45;}
+    }
+    .song-item {
+        display: flex; align-items: center; padding: 10px 30px; font-size: 13px; cursor: default;
+        &:hover {background-color: #efefef;}
+        .index, .volumn{width: 50px; text-align: left;} 
+        .volumn {color: #d74d45} .index {color: #bebecd;}
+        .song-title, .song-singer, .song-album {
+            flex: 1; font-size: 13px;
+        }
+        .song-title { color: #517eaf;}
+    }
+    
+    .active {
+        .song-title {color: #d74d45}
+    }
+    .playlists {
+        display: flex; flex-wrap: wrap;  padding: 10px 30px;
+        .playlist-item {
+            width: 20%; padding: 10px;
+            .img {
+                position: relative; width: 100%; height: 0; padding-top: 100%; border-radius: 3px; overflow: hidden;
+                img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;}
+            }
+        }
+    }
+    .no-data {
+        display: flex; justify-content: center; align-items: center;
+        width: 100%; height: 100%;
+    }
+}
